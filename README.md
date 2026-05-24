@@ -1,17 +1,410 @@
-#CleanBot: The Smart Waste Collector
-Project Overview
+# 🌊 CleanBot: The Smart Waste Collector
 
-CleanBot: The Smart Waste Collector is an IoT-based water surface cleaning robot designed to collect floating waste such as plastic bottles, papers, and floating debris from lakes, ponds, and rivers. The robot is controlled wirelessly using Bluetooth communication and operates using an Arduino UNO microcontroller.
+<div align="center">
 
-The project helps reduce water pollution, minimizes manual cleaning effort, and supports environmental sustainability through smart automation. The robot navigates on water using DC motors and collects waste through a front-mounted scoop or net mechanism.
+![Project Banner](images/robot_model.jpg)
 
-📌 Features
-Bluetooth-based wireless control
-Arduino UNO based processing system
-Real-time movement control
-Floating water-surface navigation
-Trash collection mechanism
-Low-cost and eco-friendly solution
-FSM (Finite State Machine) based control logic
-Easy to maintain and scalable
-📌 Technologies Used
+### 🚀 IoT-Based Water Surface Cleaning Robot
+
+![Arduino](https://img.shields.io/badge/Arduino-UNO-blue?style=for-the-badge&logo=arduino)
+![Bluetooth](https://img.shields.io/badge/HC--05-Bluetooth-green?style=for-the-badge)
+![Language](https://img.shields.io/badge/Language-C%2FC%2B%2B-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Project-Completed-success?style=for-the-badge)
+
+</div>
+
+---
+
+# 📖 About The Project
+
+CleanBot is an IoT-based smart robotic system designed to collect floating waste from water bodies such as lakes, ponds, and rivers. The robot operates using Bluetooth communication and Arduino-based motor control to navigate across the water surface and collect floating trash efficiently.
+
+The project helps in reducing marine pollution, minimizing manual labor, and promoting environmental sustainability using low-cost embedded system technologies.
+
+---
+
+# ✨ Features
+
+✔️ Bluetooth-Based Wireless Control  
+✔️ Real-Time Robot Navigation  
+✔️ Floating Water Surface Operation  
+✔️ Arduino UNO Based Processing  
+✔️ Low-Cost Embedded System  
+✔️ FSM (Finite State Machine) Logic  
+✔️ Trash Collection Mechanism  
+✔️ Eco-Friendly Design  
+✔️ Easy Maintenance & Scalability  
+
+---
+
+# 🛠️ Hardware Components
+
+| Component | Description |
+|------------|-------------|
+| Arduino UNO | Main microcontroller |
+| HC-05 Bluetooth Module | Wireless communication |
+| L298N Motor Driver | Controls motor movement |
+| 12V DC Motors | Robot propulsion |
+| 12V Battery | Power supply |
+| Floating Chassis | Supports robot on water |
+| Trash Scoop / Net | Collects floating waste |
+| Connecting Wires | Hardware connectivity |
+
+---
+
+# 💻 Software Requirements
+
+| Software | Purpose |
+|----------|----------|
+| Arduino IDE | Programming & Uploading Code |
+| Embedded C/C++ | Logic Implementation |
+| Arduino Bluetooth Controller App | Robot Control |
+| Dabble App | Bluetooth Communication |
+
+---
+
+# 🎯 Project Objectives
+
+- To develop a low-cost water cleaning robot.
+- To reduce floating waste pollution in water bodies.
+- To minimize human effort in waste collection.
+- To implement Bluetooth-based wireless control.
+- To provide real-time movement and navigation.
+- To promote smart environmental sustainability.
+
+---
+
+# ⚙️ Working Principle
+
+The CleanBot works using Bluetooth communication between a mobile application and the robot.
+
+1️⃣ User sends movement commands from mobile app  
+2️⃣ HC-05 Bluetooth module receives commands  
+3️⃣ Arduino UNO processes the commands  
+4️⃣ Arduino controls the L298N motor driver  
+5️⃣ Motor driver activates DC motors  
+6️⃣ Robot moves on water surface  
+7️⃣ Front scoop collects floating waste  
+8️⃣ Waste gets stored inside collection compartment  
+
+---
+
+# 🔄 Project Flow
+
+```text
+Mobile Application
+        ↓
+Bluetooth Commands
+        ↓
+HC-05 Bluetooth Module
+        ↓
+Arduino UNO
+        ↓
+L298N Motor Driver
+        ↓
+DC Motors
+        ↓
+Robot Navigation
+        ↓
+Trash Collection Mechanism
+        ↓
+Waste Storage
+```
+
+---
+
+# 🏗️ System Architecture
+
+<div align="center">
+
+![System Architecture](images/system_architecture.jpg)
+
+</div>
+
+```text
++----------------------+
+| Mobile Application   |
++----------------------+
+           ↓
++----------------------+
+| HC-05 Bluetooth      |
+| Module               |
++----------------------+
+           ↓
++----------------------+
+| Arduino UNO          |
+| Processing Unit      |
++----------------------+
+           ↓
++----------------------+
+| L298N Motor Driver   |
++----------------------+
+           ↓
++----------------------+
+| DC Geared Motors     |
++----------------------+
+           ↓
++----------------------+
+| Trash Collection     |
+| Mechanism            |
++----------------------+
+```
+
+---
+
+# 🔌 Hardware Connections
+
+## 📍 HC-05 Bluetooth Module Connection
+
+| HC-05 Pin | Arduino UNO |
+|-----------|--------------|
+| VCC | 5V |
+| GND | GND |
+| TXD | RX (Pin 0) |
+| RXD | TX (Pin 1) |
+
+---
+
+## 📍 L298N Motor Driver Connection
+
+| L298N Pin | Arduino UNO |
+|------------|--------------|
+| IN1 | Pin 8 |
+| IN2 | Pin 9 |
+| IN3 | Pin 10 |
+| IN4 | Pin 11 |
+| ENA | 5V / PWM |
+| ENB | 5V / PWM |
+| GND | GND |
+
+---
+
+## 📍 DC Motor Connection
+
+| Motor | Connected To |
+|-------|---------------|
+| Left Motor | OUT1 & OUT2 |
+| Right Motor | OUT3 & OUT4 |
+
+---
+
+## 📍 Power Supply Connection
+
+| Component | Power Source |
+|-----------|---------------|
+| Arduino UNO | 12V Battery |
+| L298N Driver | 12V Battery |
+| DC Motors | Through L298N |
+
+---
+
+# 🧠 FSM (Finite State Machine) Logic
+
+| Command | Action |
+|----------|---------|
+| F | Move Forward |
+| B | Move Backward |
+| L | Turn Left |
+| R | Turn Right |
+| S | Stop |
+
+---
+
+# 📋 Detailed Project Working
+
+## 🔹 Step 1: Initialization
+- Robot powers ON
+- Bluetooth module initializes
+- Arduino starts motor setup
+
+---
+
+## 🔹 Step 2: Bluetooth Communication
+- Mobile app connects with HC-05
+- Commands are transmitted wirelessly
+
+---
+
+## 🔹 Step 3: Command Processing
+- Arduino reads received command
+- FSM logic determines movement
+
+---
+
+## 🔹 Step 4: Motor Activation
+- L298N receives control signals
+- Motors execute movement
+
+---
+
+## 🔹 Step 5: Trash Collection
+- Front scoop collects floating waste
+- Waste stored inside collection area
+
+---
+
+## 🔹 Step 6: Stop / Return
+- Robot stops after cleaning
+- Waste removed manually
+
+---
+
+# 📷 Project Images
+
+## 🔹 Complete Robot Model
+
+```markdown
+![Complete Robot](images/robot_model.jpg)
+```
+
+---
+
+## 🔹 Hardware Connection
+
+```markdown
+![Hardware Connection](images/hardware_connection.jpg)
+```
+
+---
+
+## 🔹 Circuit Diagram
+
+```markdown
+![Circuit Diagram](images/circuit_diagram.jpg)
+```
+
+---
+
+## 🔹 Working Model
+
+```markdown
+![Working Model](images/working_model.jpg)
+```
+
+---
+
+## 🔹 Trash Collection Mechanism
+
+```markdown
+![Trash Collection](images/trash_collection.jpg)
+```
+
+---
+
+## 🔹 Arduino Setup
+
+```markdown
+![Arduino Setup](images/arduino_setup.jpg)
+```
+
+---
+
+## 🔹 Bluetooth App Control
+
+```markdown
+![Bluetooth Control](images/bluetooth_control.jpg)
+```
+
+---
+
+# 📊 Performance Analysis
+
+| Parameter | Existing System | Proposed System |
+|------------|----------------|----------------|
+| Response Time | 3–5 sec | ~1 sec |
+| Collection Efficiency | 75% | 90% |
+| Human Effort | High | Low |
+| Control System | Manual | Bluetooth |
+| Reliability | Medium | High |
+
+---
+
+# 🌱 Advantages
+
+✅ Reduces Water Pollution  
+✅ Minimizes Manual Labor  
+✅ Low Operational Cost  
+✅ Wireless Real-Time Control  
+✅ Eco-Friendly System  
+✅ Easy Maintenance  
+✅ Portable & Scalable  
+
+---
+
+# 🌍 Applications
+
+- Lake Cleaning
+- Pond Cleaning
+- River Cleaning
+- Smart Waste Management
+- Environmental Monitoring
+
+---
+
+# 🚀 Future Enhancements
+
+🔹 Solar Powered Charging System  
+🔹 AI-Based Waste Detection  
+🔹 GPS Navigation System  
+🔹 Obstacle Avoidance Sensors  
+🔹 Autonomous Navigation  
+🔹 IoT Cloud Monitoring  
+
+---
+
+# 📂 Project Folder Structure
+
+```text
+CleanBot/
+│
+├── Arduino_Code/
+│   └── cleanbot.ino
+│
+├── images/
+│   ├── robot_model.jpg
+│   ├── hardware_connection.jpg
+│   ├── system_architecture.jpg
+│   ├── circuit_diagram.jpg
+│   ├── working_model.jpg
+│   ├── trash_collection.jpg
+│   ├── arduino_setup.jpg
+│   └── bluetooth_control.jpg
+│
+├── Documentation/
+│   └── Project_Report.pdf
+│
+├── README.md
+└── LICENSE
+```
+
+---
+
+# 🏁 Conclusion
+
+The CleanBot project successfully demonstrates a smart and cost-effective robotic solution for cleaning floating waste from water bodies. The integration of Arduino UNO, Bluetooth communication, DC motors, and FSM-based control provides smooth navigation and efficient trash collection. The project supports environmental sustainability while reducing human effort and operational cost.
+
+---
+
+# 👩‍💻 Developed By
+
+### Tejaswini D  
+🎓 Information Science & Engineering  
+🏫 Global Academy of Technology, Bengaluru  
+
+---
+
+# 📚 References
+
+1. Autonomous Robotic System for Collecting Garbage Over Small Water Bodies  
+2. Water Surface Solid Waste Cleaning Robot for Ponds  
+3. Android Application Controlled Water Trash Bot Using IoT  
+4. Solar Powered RT-Bot River Trash Collecting Robot  
+5. IEEE Research Papers on Smart Waste Management  
+
+---
+
+<div align="center">
+
+## ⭐ If you like this project, give it a Star ⭐
+
+</div>
