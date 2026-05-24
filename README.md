@@ -255,6 +255,8 @@ Waste Storage
 
 ```markdown
 ![Complete Robot](images/robot_model.jpg)
+<img width="876" height="489" alt="image" src="https://github.com/user-attachments/assets/10665986-505d-4bcb-a172-fadb9f3c7372" />
+
 ```
 
 ---
@@ -263,6 +265,8 @@ Waste Storage
 
 ```markdown
 ![Hardware Connection](images/hardware_connection.jpg)
+<img width="898" height="639" alt="image" src="https://github.com/user-attachments/assets/19c7a259-b7fa-4c9e-aefe-1d79b65c6fae" />
+
 ```
 
 ---
@@ -279,6 +283,8 @@ Waste Storage
 
 ```markdown
 ![Working Model](images/working_model.jpg)
+<img width="878" height="528" alt="image" src="https://github.com/user-attachments/assets/7daf65d0-b4be-4230-bac0-76f9a7ad5bab" />
+
 ```
 
 ---
@@ -295,6 +301,8 @@ Waste Storage
 
 ```markdown
 ![Arduino Setup](images/arduino_setup.jpg)
+<img width="459" height="307" alt="image" src="https://github.com/user-attachments/assets/93394978-e166-4e05-bd8d-4648461335fb" />
+
 ```
 
 ---
@@ -303,6 +311,8 @@ Waste Storage
 
 ```markdown
 ![Bluetooth Control](images/bluetooth_control.jpg)
+<img width="322" height="329" alt="image" src="https://github.com/user-attachments/assets/46fba8c9-4540-4ea4-981e-0b72018cb343" />
+
 ```
 
 ---
@@ -382,6 +392,7 @@ CleanBot/
 # 🏁 Conclusion
 
 The CleanBot project successfully demonstrates a smart and cost-effective robotic solution for cleaning floating waste from water bodies. The integration of Arduino UNO, Bluetooth communication, DC motors, and FSM-based control provides smooth navigation and efficient trash collection. The project supports environmental sustainability while reducing human effort and operational cost.
+<img width="876" height="489" alt="image" src="https://github.com/user-attachments/assets/e8db29db-94f2-4bda-804c-99cfc00ae8ac" />
 
 ---
 
